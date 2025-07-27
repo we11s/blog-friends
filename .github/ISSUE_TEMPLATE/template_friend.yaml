@@ -22,12 +22,12 @@ body:
       value: |
         ```json
         {
-            "title": "友链标题",
-            "url": "友链地址",
-            "icon": "网站图标",
-            "snapshot": "网站截图",
-            "description": "一句话简介",
-            "feed": "RSS订阅地址"
+            "title": "",
+            "url": "",
+            "icon": "",
+            "snapshot": "",
+            "description": "",
+            "feed": ""
         }
         ```
   - type: input
