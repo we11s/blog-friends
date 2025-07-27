@@ -43,4 +43,4 @@ body:
     attributes:
       label: 友链仓库（可选）
       description: 如果您使用 issue 作为友链源，请附上 issue 仓库链接
-      placeholder: "如: hhttps://github.com/we11s/blog-friend-link"
+      placeholder: "如: hhttps://github.com/we11s/blog-friends"
