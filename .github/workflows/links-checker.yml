@@ -39,6 +39,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
       - name: Commit and Push to output branch
         run: |
           git fetch origin output || true
@@ -46,3 +47,9 @@ jobs:
           git add --all
           git commit -m "Update data from issues" || echo "No changes to commit"
           git push -f origin output
+          
+      - name: Purge jsDelivr Cache
+        uses: egad13/purge-jsdelivr-cache@v1.1.0
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/we11s/blog-friends@output/v2/data.json
