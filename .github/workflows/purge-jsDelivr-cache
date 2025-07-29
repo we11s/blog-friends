@@ -1,0 +1,21 @@
+name: Purge jsDelivr Cache
+
+on:
+  push:
+    branches:
+      - output
+  workflow_dispatch:
+
+jobs:
+  purge_cache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Purge jsDelivr Cache
+        uses: egad13/purge-jsdelivr-cache@v1.1.0
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/${{ github.repository_owner }}/${{ github.event.repository.name }}@output/v2/data.json
