@@ -47,9 +47,3 @@ jobs:
           git add --all
           git commit -m "Update data from issues" || echo "No changes to commit"
           git push -f origin output
-          
-      - name: Purge jsDelivr Cache
-        uses: egad13/purge-jsdelivr-cache@v1.1.0
-        with:
-          url: |
-            https://cdn.jsdelivr.net/gh/we11s/blog-friends@output/v2/data.json
